@@ -1,0 +1,23 @@
+<div style="width: 400px; margin: auto;">
+    <div class="submit-form">
+        <div *ngIf="!enviado">
+            <div class="form-group">
+                <label for="title">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required [(ngModel)]="profesor.nombre"
+                    name="title" />
+            </div>
+            <div class="form-group">
+                <label for="description">Apellido</label>
+                <input class="form-control" id="apellido" required [(ngModel)]="profesor.apellido" name="description" />
+            </div>
+            <div class="form-group">
+                <label for="description">Curso</label>
+                <input class="form-control" id="curso" required [(ngModel)]="profesor.curso" name="description" />
+            </div>
+            <button (click)="editProfesor()" class="btn btn-success" style="margin-top: 3%;">Editar</button>
+        </div>
+        <div *ngIf="enviado" style="text-align: center;">
+            <h4>Profesor editado correctamente!</h4>
+        </div>
+    </div>
+</div>
